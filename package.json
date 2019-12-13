@@ -4,22 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node -r esm index.js"
+    "start": "node index.js ls"
   },
   "dependencies": {
     "@octokit/rest": "^16.35.0",
-    "chalk": "^3.0.0",
     "clear": "^0.1.0",
-    "cli-table": "^0.3.1",
     "clui": "^0.3.6",
-    "commander": "^4.0.1",
-    "configstore": "^5.0.0",
-    "esm": "^3.2.25",
-    "figlet": "^1.2.4",
-    "inquirer": "^7.0.0",
-    "lodash": "^4.17.15",
-    "minimist": "^1.2.0",
-    "simple-git": "^1.128.0",
-    "touch": "^3.1.0"
+    "commander": "^4.0.1"
   }
 }

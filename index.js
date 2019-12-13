@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
 const program = require("commander");
-const _ = require('lodash');
 const fs = require('fs');
 const helpers = require('./lib/helpers');
+const clear = require('clear')
 const CLI = require('clui');
 const clc = require('cli-color');
 const Line = CLI.Line;
 const LineBuffer = CLI.LineBuffer;
 
-
+clear();
 program.version('0.0.1')
     .description("Commandline Utility");
 
@@ -31,7 +31,6 @@ program.command('ls [dir]')
             .column(`files`, 20, [clc.cyan])
             .fill()
             .store();
-        let line;
 
         const dirs = []
         const files = []
@@ -54,7 +53,7 @@ program.command('ls [dir]')
                 .fill()
                 .store();
         }
-        outputBuffer.output()
+        return outputBuffer.output()
     }))
 
 program.parse(process.argv)
